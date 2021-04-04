@@ -37,6 +37,14 @@ export class Queue<T> {
   clear() {
     this.items = [];
   }
+
+  /**
+   * Returns an array of the items in the queue as a defensive copy.
+   * @returns array containing the items in the queue
+   */
+  toArray() {
+    return this.items.slice(this.offset, this);
+  }
 }
 
 export class AsyncQueue<T> extends Queue<T> {
