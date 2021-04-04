@@ -43,7 +43,7 @@ export class Queue<T> {
    * @returns array containing the items in the queue
    */
   toArray() {
-    return this.items.slice(this.offset, this);
+    return this.items.slice(this.offset);
   }
 }
 

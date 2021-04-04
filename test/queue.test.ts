@@ -1,5 +1,5 @@
 import expect from "expect";
-import {Queue, AsyncQueue} from "../src";
+import { Queue, AsyncQueue } from "../src";
 
 describe("queue", () => {
   let q: Queue<number> | undefined;
@@ -24,6 +24,19 @@ describe("queue", () => {
       values.push(q.dequeue());
     }
     expect(values).toEqual(array);
+  });
+
+  it("toArray should return the correct number of values", () => {
+    const array = [];
+    for (let i = 0; i < 10; ++i) {
+      array.push(i);
+      q.enqueue(i);
+    }
+
+    for (let i = 0; i < 3; ++i) {
+      q.dequeue();
+    }
+    expect(q.toArray()).toHaveLength(7);
   });
 });
 
@@ -65,4 +78,4 @@ describe("async queue", () => {
       expect(await q.dequeueOrWait()).toBe(i);
     }
   });
-})
+});
