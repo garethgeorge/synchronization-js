@@ -1,6 +1,6 @@
 {
   "name": "synchronization-js",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "provides synchronization datastructures i.e. queues and semaphores in JavaScript",
   "main": "dist/src/index.js",
   "types": "dist/src/index.d.ts",

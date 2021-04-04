@@ -1,5 +1,5 @@
 import expect from "expect";
-import Queue, { AsyncQueue } from "../src/lib/queue";
+import {Queue, AsyncQueue} from "../src";
 
 describe("queue", () => {
   let q: Queue<number> | undefined;

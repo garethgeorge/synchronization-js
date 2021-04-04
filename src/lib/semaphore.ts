@@ -1,6 +1,6 @@
-import Queue from "./queue";
+import {Queue} from "./queue";
 
-export default class Semaphore {
+export class Semaphore {
   private count: number;
   private awaiters: Queue<() => void> = new Queue;
 

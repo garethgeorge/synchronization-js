@@ -1,5 +1,5 @@
 import expect from "expect";
-import Semaphore from "../src/lib/semaphore";
+import {Semaphore} from "../src";
 
 /** 
  * TODO: move datastructures and tests into their own libraries
