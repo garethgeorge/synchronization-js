@@ -1,0 +1,40 @@
+{
+  "name": "synchronization-js",
+  "version": "1.0.1",
+  "description": "provides synchronization datastructures i.e. queues and semaphores in JavaScript",
+  "main": "dist/src/index.js",
+  "types": "dist/src/index.d.ts",
+  "prepublish": "tsc",
+  "scripts": {
+    "test": "mocha test",
+    "build": "rm -rf dist && tsc"
+  },
+  "author": "garethgeorge",
+  "license": "ISC",
+  "dependencies": {},
+  "type": "commonjs",
+  "devDependencies": {
+    "@types/mocha": "^8.2.2",
+    "expect": "^26.6.2",
+    "mocha": "^8.1.3",
+    "ts-node": "^9.0.0",
+    "typescript": "^4.0.2"
+  },
+  "mocha": {
+    "package": "./package.json",
+    "extension": [
+      "ts"
+    ],
+    "spec": [
+      "test/**/*.test.ts"
+    ],
+    "recursive": true,
+    "file": [],
+    "require": [
+      "ts-node/register",
+      "source-map-support/register"
+    ],
+    "ui": "bdd",
+    "exit": true
+  }
+}
