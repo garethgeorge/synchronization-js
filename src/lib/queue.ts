@@ -14,7 +14,7 @@ export class Queue<T> {
 
     const item = this.items[this.offset];
     this.offset++;
-    if (this.offset * 2 >= this.items.length) {
+    if (this.items.length > 32 && this.offset * 2 >= this.items.length) {
       this.items = this.items.slice(this.offset);
       this.offset = 0;
     }
